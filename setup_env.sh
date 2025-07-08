@@ -1,27 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
-
-echo "Select your CPU architecture:"
-echo "1) ARM (macOS)"
-echo "2) x86 (Intel)"
-
-read -rp "Enter 1 or 2: " arch_choice
-
-case "$arch_choice" in
-  1)
-    JAVA_DIST="aarch64"
-    PROTOC_DIST="aarch_64"
-    ;;
-  2)
-    JAVA_DIST="x64"
-    PROTOC_DIST="x86_64"
-    ;;
-  *)
-    echo "Invalid choice, please run the script again and enter 1 or 2."
-    exit 1
-    ;;
-esac
+# Distribution/Architecture specific flags
+JAVA_DIST="x64"
+PROTOC_DIST="x86_64"
 
 # Define versions
 JAVA_RELEASE=22
