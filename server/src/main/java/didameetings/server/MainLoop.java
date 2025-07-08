@@ -62,7 +62,7 @@ public class MainLoop implements Runnable  {
 	    int           quorum           = this.server_state.scheduler.quorum (ballot);
 	    int           n_acceptors      = acceptors.size();
 	    
-	    if ((request_record != null) && (this.server_state.scheduler.leader(ballot)==this.server_state.my_id)) {
+	    if ((ballot > -1) && (request_record != null) && (this.server_state.scheduler.leader(ballot)==this.server_state.my_id)) {
 		
 		System.out.println("I am the leader for request with id " + request_record.getId());
 		boolean ballot_aborted   = false;
