@@ -115,8 +115,8 @@ public class Console {
 		    System.out.println("ballot " + parameter1 + " " + parameter2);
                     if ((parameter1 != null) && (parameter2 != null)) {
 			int ballot_number  =  Integer.parseInt(parameter1);
-			if (ballot_number <= this.getLastBallot())
-			    System.out.println("usage: ballot must be larger than " + last_ballot + ".\n");
+			if (ballot_number < this.getLastBallot())
+			    System.out.println("usage: ballot must be larger or equal than " + last_ballot + ".\n");
 			else {
 			    this.setLastBallot (ballot_number);
 			    try {
