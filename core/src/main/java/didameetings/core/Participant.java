@@ -25,6 +25,7 @@ public class Participant {
     }
     
     public void setTopic (int topic) {
-	this.topic = topic;
+	if (topic > this.topic)
+	    this.topic = topic;
     }
 }
