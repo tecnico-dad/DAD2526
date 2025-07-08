@@ -49,6 +49,8 @@ public class Meeting {
 	Participant p = this.without_topic.get(pid);
 
 	if (p==null)
+	    p = this.with_topic.get(pid);
+	if (p==null)
 	    return false;
 	else {
 	    p.setTopic(topic);
