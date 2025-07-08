@@ -64,12 +64,16 @@ public class MeetingManager {
     }
 
     public boolean close (Integer mid) {
-	Meeting meeting = this.open_meetings.get(mid);
+	Meeting meeting = this.closed_meetings.get(mid);
+
+	if (meeting != null)
+	    return true;
+
+	meeting = this.open_meetings.get(mid);
 
 	if (meeting == null) 
 	    return false;
 	
-
 	meeting.close();
 
 	this.closed_meetings.put (mid, meeting);
