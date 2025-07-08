@@ -83,6 +83,7 @@ public class DidaMeetingsPaxosServiceImpl extends DidaMeetingsPaxosServiceGrpc.D
 	
 
 	DidaMeetingsPaxos.PhaseTwoReply.Builder response_builder = DidaMeetingsPaxos.PhaseTwoReply.newBuilder();
+	response_builder.setAccepted(accepted);
 	response_builder.setInstance(instance);
 	response_builder.setServerid(this.server_state.my_id);
 	response_builder.setRequestballot(ballot);
