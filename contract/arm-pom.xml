@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<!-- http://maven.apache.org/pom.html#Quick_Overview -->
 
-	<groupId>dad2526</groupId>
+	<groupId>dida2526</groupId>
 	<artifactId>didameetings-contract</artifactId>
 	<version>v1</version>
 	<packaging>jar</packaging>
